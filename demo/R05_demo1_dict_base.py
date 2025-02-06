@@ -5,13 +5,11 @@ employe = {"prenom":"Ana","nom":"tremblay","departement":"informatique","id":732
 
 
 # On veut obtenir le nom complet de l'employé
-
+print(f"{employe["prenom"]}{employe["nom"]}")
 
 
 # Déja, on se rend compte d'une erreur lorsque le nom a été entré
 # on veut que le nom de famille commence par une majuscule.
-
-
 
 
 # Maintenant, on veut vérifier la date d'embauche de l'employé. 
@@ -29,6 +27,7 @@ if employe.get("embauche") == None:
 # Dans ces exemples nous travaillons avec un dictionnaire que nous connaissons.
 # Si on travaille avec un dictionnaire qu'on a obtenu à partir d'une source externe...
 # il faut d'abord connaitre les clefs.
+
 print(employe.keys())
 
 
@@ -40,10 +39,11 @@ print(employe.keys())
 # # Maintenant, on veut ajouter une liste des langagues de programmation connus par l'employe pour savoir quel cours il pourrait donner.
 competences = ["Python","C#","Pascal","Assembleur","Fortran","Magic the gathering"]
 
-
+employe["language"] = competences
 
 
 # # Si ensuite on veut extraire les languages pour une raison quelconque
+
 languages_prog = employe["language"]
 
 
@@ -55,6 +55,8 @@ languages_prog = employe["language"]
 
 
 # # Si on veut ajouter un language
+for lang in employe["language"]:
+    print(f"{lang}")
 
 
 

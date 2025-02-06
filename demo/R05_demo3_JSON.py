@@ -10,10 +10,11 @@ produit = json.loads(fichier_lu)
 
 
 # Imprimer le prix du produit 
-
+print(produit["price"])
 
 # Modifier le prix
-
+produit["price"] = .8 * produit["price"]
+print(produit["price"])
 
 # Pour écrire dans un fichier json,
 #       on ouvre d'abord le fichier avec un "with open( ....."
